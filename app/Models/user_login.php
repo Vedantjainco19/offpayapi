@@ -32,6 +32,7 @@ class user_login extends Model
         'mobileNo',
         'otp',
         'isActive',
+        'otpExpiry',
         'resendCount',
     ];
 

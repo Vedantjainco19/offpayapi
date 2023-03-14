@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('user_login', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->integer('mobileNo');
-            $table->integer('otp')->nullable();;
+            $table->increments('id');
+            $table->string('mobileNo')->unique();
+            $table->integer('otp')->nullable();
+            $table->datetime('otpExpiry')->nullable();
             $table->integer('isActive')->default(0);
             $table->integer('resendCount')->default(0);
             $table->timestamps();
