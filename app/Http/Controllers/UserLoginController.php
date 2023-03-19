@@ -6,6 +6,8 @@ use App\Models\user_login;
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
 use Carbon\Carbon;
+use App\Models\User;
+// use Illuminate\Support\Facades\Auth;
 
 class UserLoginController extends Controller
 {
